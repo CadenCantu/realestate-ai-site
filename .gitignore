@@ -1,0 +1,18 @@
+# dependencies
+/node_modules
+
+# next.js build output
+/.next/
+/out/
+
+# local env files (never commit real secrets)
+.env
+.env.local
+.env*.local
+
+# local data files from dev-only storage
+*.local.txt
+
+# OS files
+.DS_Store
+Thumbs.db
