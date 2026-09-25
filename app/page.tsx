@@ -17,9 +17,9 @@ export default function Home() {
 
 function Nav() {
   return (
-    <nav style={styles.nav}>
+    <nav style={styles.nav} className="nav">
       <img src="/logo-white.jpg" alt="Can2" style={{ maxWidth: 400, width: "100%", height: "auto" }} />
-      <p style={styles.tagline}>Because you can too</p>
+      <p style={styles.tagline} className="tagline">Because you can too</p>
     </nav>
   );
 }
@@ -51,10 +51,10 @@ function Hero() {
   }
 
   return (
-    <section style={{ ...styles.section, textAlign: "center", paddingTop: "1.5rem", paddingBottom: "0" }}>
+    <section style={{ ...styles.section, textAlign: "center", paddingTop: "1.5rem", paddingBottom: "0" }} className="section">
       <span style={styles.eyebrow}>CAN2 Serives</span>
-      <h1 style={styles.h1}>Turn house photos into a high resolution video in minutes</h1>
-      <p style={styles.sub}>
+      <h1 style={styles.h1} className="h1">Turn house photos into a high resolution video in minutes</h1>
+      <p style={styles.sub} className="sub">
         Upload a room photo, and get back a smooth, professional AI-animated
         video — no camera crew, no editing software, no expensive videos,
         ready to post same day.
@@ -62,22 +62,22 @@ function Hero() {
 
       {!submitted ? (
         <>
-          <div style={styles.emailRow}>
+          <div style={styles.emailRow} className="email-row">
             <div style={styles.stepBadge}>1</div>
-            <form onSubmit={handleSubmit} style={styles.waitlistForm}>
+            <form onSubmit={handleSubmit} style={styles.waitlistForm} className="waitlist-form">
               <input
                 type="email"
                 placeholder="you@youragency.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                style={styles.emailInput}
+                style={styles.emailInput} className="email-input"
               />
               <button type="submit" style={styles.button}>
                 It starts here
               </button>
             </form>
           </div>
-           <div style={styles.emailRow}>
+           <div style={styles.emailRow} className="email-row">
               <div style={styles.stepBadge}>2</div>
           <label style={styles.dropzone}>
             {photo ? (
@@ -121,9 +121,9 @@ function HowItWorks() {
     { title: "Download & post", desc: "Get a ready-to-share clip back in your inbox, usually within minutes." },
   ];
   return (
-    <section style={{ ...styles.section, paddingTop: "1rem" }}>
+    <section style={{ ...styles.section, paddingTop: "1rem" }} className="section">
       <h2 style={styles.h2}>How it works</h2>
-      <div style={styles.stepsGrid}>
+      <div style={styles.stepsGrid} className="steps-grid">
         {steps.map((s, i) => (
           <div key={s.title} style={styles.stepCard}>
             <div style={styles.stepNumber}>{i + 1}</div>
@@ -138,10 +138,10 @@ function HowItWorks() {
 
 function Pricing() {
   return (
-    <section style={styles.section}>
+    <section style={styles.section} className="section">
       <h2 style={styles.h2}>Simple pricing</h2>
-      <div style={styles.pricingCard}>
-        <p style={styles.price}>$50</p>
+      <div style={styles.pricingCard} className="pricing-card">
+        <p style={styles.price} className="price">$50</p>
         <p style={styles.priceUnit}>per video</p>
         <ul style={styles.priceList}>
           <li>Upload as many photos as you need — $50 per video</li>
@@ -161,7 +161,7 @@ function FAQ() {
     { q: "Can I use this for a whole listing?", a: "Yes — once we're out of early access, you'll be able to submit multiple photos from the same listing and get a clip for each." },
   ];
   return (
-    <section style={styles.section}>
+    <section style={styles.section} className="section">
       <h2 style={styles.h2}>Questions</h2>
       <div style={styles.faqList}>
         {faqs.map((f) => (
